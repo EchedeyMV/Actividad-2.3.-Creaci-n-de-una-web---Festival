@@ -49,9 +49,27 @@
       padding: 6px;
     }
 
+    th {
+      background-color: #d9ecef;
+    }
+
+    caption {
+      background-color: #fff3cd;
+      font-weight: bold;
+      padding: 6px;
+    }
+
     aside {
       border-left: 4px solid #888888;
       padding: 8px 16px;
+    }
+
+    button {
+      background-color: #555555;
+      color: #ffffff;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -205,6 +223,71 @@
     <!-- ===== Formulario ===== -->
     <section id="inscripcion">
       <h2>Formulario de inscripción</h2>
+      <p>Solicita tu participación en una actividad. Los campos marcados con * son obligatorios.</p>
+
+      <form action="https://webhook.site/TU-URL-AQUI" method="POST">
+        <fieldset>
+          <legend>Datos personales</legend>
+
+          <label for="nombre">Nombre y apellidos *</label>
+          <input type="text" id="nombre" name="nombre" required autocomplete="name">
+          <br>
+
+          <label for="email">Correo electrónico *</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+          <br>
+
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" pattern="[0-9 +]{9,15}" autocomplete="tel">
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferencias</legend>
+
+          <label for="actividad">Actividad preferida</label>
+          <select id="actividad" name="actividad" required>
+            <option value="">-- Elige una opción --</option>
+            <option value="percusion">Taller de percusión tradicional</option>
+            <option value="ruta">Ruta de artesanía y gastronomía</option>
+            <option value="cuentacuentos">Cuentacuentos canarios</option>
+            <option value="dj">Sesión DJ bajo las estrellas</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Horario preferido</legend>
+          <input type="radio" id="manana" name="horario" value="manana" required>
+          <label for="manana">Mañana</label><br>
+          <input type="radio" id="tarde" name="horario" value="tarde">
+          <label for="tarde">Tarde</label><br>
+          <input type="radio" id="noche" name="horario" value="noche">
+          <label for="noche">Noche</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Servicios de interés</legend>
+          <input type="checkbox" id="transporte" name="servicios" value="transporte">
+          <label for="transporte">Transporte</label><br>
+          <input type="checkbox" id="comida" name="servicios" value="comida">
+          <label for="comida">Comida</label><br>
+          <input type="checkbox" id="infantil" name="servicios" value="espacio-infantil">
+          <label for="infantil">Espacio infantil</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Comentarios</legend>
+          <label for="comentarios">Escribe aquí tus comentarios</label><br>
+          <textarea id="comentarios" name="comentarios" rows="4" cols="40" maxlength="500"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Privacidad</legend>
+          <input type="checkbox" id="acepto" name="acepto" value="si" required>
+          <label for="acepto">He leído la <a href="#privacidad">política de privacidad</a> *</label>
+        </fieldset>
+
+        <button type="submit">Enviar solicitud</button>
+      </form>
     </section>
 
     <!-- ===== Privacidad ===== -->
