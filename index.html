@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Festival Alisio Sonoro: música, talleres y cultura en Agüimes, Gran Canaria, del 17 al 19 de julio de 2027.">
   <title>Festival Alisio Sonoro – Agüimes, Gran Canaria</title>
   <style>
     body {
-      background-color: #ffffff;
+      background-color: #fff8e7;
       color: #222222;
       font-family: Arial, sans-serif;
       font-size: 18px;
@@ -17,13 +18,22 @@
     }
 
     h1, h2, h3, h4 {
-      color: #333333;
+      color: #0b5563;
     }
 
     header, footer {
-      background-color: #dddddd;
+      background-color: #0b5563;
+      color: #ffffff;
       padding: 12px;
       text-align: center;
+    }
+
+    header h1 {
+      color: #ffffff;
+    }
+
+    footer a {
+      color: #ffffff;
     }
 
     nav ul {
@@ -32,6 +42,11 @@
       gap: 16px;
       list-style: none;
       padding: 0;
+    }
+
+    nav a {
+      color: #0b5563;
+      font-weight: bold;
     }
 
     img {
@@ -60,16 +75,35 @@
     }
 
     aside {
-      border-left: 4px solid #888888;
+      background-color: #ffe9b8;
+      border-left: 4px solid #e4572e;
       padding: 8px 16px;
     }
 
+    fieldset {
+      border: 1px solid #0b5563;
+      margin-bottom: 12px;
+    }
+
     button {
-      background-color: #555555;
+      background-color: #0b5563;
       color: #ffffff;
       border: none;
       padding: 8px 16px;
       cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e4572e;
+    }
+
+    .salto {
+      position: absolute;
+      left: -999px;
+    }
+
+    .salto:focus {
+      left: 8px;
     }
   </style>
 </head>
@@ -225,7 +259,7 @@
       <h2>Formulario de inscripción</h2>
       <p>Solicita tu participación en una actividad. Los campos marcados con * son obligatorios.</p>
 
-      <form action="https://webhook.site/TU-URL-AQUI" method="POST">
+      <form action="https://webhook.site/a33877bb-7666-4cdd-a961-187f1a6c9486" method="POST">
         <fieldset>
           <legend>Datos personales</legend>
 
